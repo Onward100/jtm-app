@@ -64,7 +64,6 @@ export default function Contact() {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    required
                   />
                 </div>
                 <div>
@@ -74,7 +73,6 @@ export default function Contact() {
                   <select
                     value={service}
                     onChange={(e) => setService(e.target.value)}
-                    required
                   >
                     <option value="">Select a service</option>
                     {servicesOptions.map((option) => (
@@ -91,7 +89,6 @@ export default function Contact() {
                   <textarea
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    required
                   />
                 </div>
                 <button type="submit">Submit</button>

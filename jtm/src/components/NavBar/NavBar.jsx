@@ -8,13 +8,17 @@ import Hamburger from "hamburger-react";
 export default function NavBar() {
   const [show, setShow] = useState(false);
   const [toggle, setToggle] = useState(false);
-  const [isClose, setIsClose] = useState(false);
 
   function handleClose() {
-    setToggle(!toggle);
+    setToggle(prevClose => !prevClose);
   }
+
   function handleChange() {
-    setShow(!show);
+    setShow((prevShow) => !prevShow);
+  }
+
+  function handleLinkClick() {
+    setShow(false); // Close dropdown on link click
   }
 
   function handleToggle() {
@@ -26,7 +30,9 @@ export default function NavBar() {
       <div className="nav">
         <div className="navbar">
           <div className="logo">
-            <img src={logo} alt="logo" />
+           <Link to='/'>
+           <img src={logo} alt="logo" />
+           </Link>
           </div>
           <div className="hamburger-menu">
             <Hamburger toggled={toggle} toggle={handleToggle} />
@@ -34,7 +40,7 @@ export default function NavBar() {
           {toggle && (
             <div className="nav-link mobile">
               <ul className="nav--links">
-                <li onClick={handleClose}>
+                <li onClick={() => { handleLinkClick(); handleClose(); }}>
                   <Link className="links" to="/">
                     Home
                   </Link>
@@ -44,34 +50,34 @@ export default function NavBar() {
                 </li>
                 {show && (
                   <ul id="dropdown-services" className="dropdown">
-                    <li onClick={handleClose}>
+                    <li onClick={() => { handleLinkClick(); handleClose(); }}>
                       <Link className="links" to="">
                         Podcast
                       </Link>
                     </li>
-                    <li onClick={handleClose}>
+                    <li onClick={() => { handleLinkClick(); handleClose(); }}>
                       <Link className="links" to="">
                         Meeting
                       </Link>
                     </li>
-                    <li onClick={handleClose}>
+                    <li onClick={() => { handleLinkClick(); handleClose(); }}>
                       <Link className="links" to="">
                         Bible debates
                       </Link>
                     </li>
-                    <li onClick={handleClose}>
+                    <li onClick={() => { handleLinkClick(); handleClose(); }}>
                       <Link className="links" to="">
                         Prayers
                       </Link>
                     </li>
                   </ul>
                 )}
-                <li onClick={handleClose}>
+                <li onClick={() => { handleLinkClick(); handleClose(); }}>
                   <Link className="links" to="/about">
                     About Us
                   </Link>
                 </li>
-                <li onClick={handleClose}>
+                <li onClick={() => { handleLinkClick(); handleClose(); }}>
                   <Link className="links" to="/contact">
                     Contact Us
                   </Link>
@@ -79,53 +85,53 @@ export default function NavBar() {
               </ul>
             </div>
           )}
-          { /* Desktop Nav Links */}
+          {/* Desktop Nav Links */}
           <div className="desktop">
-              <ul className="nav--links">
-                <li>
-                  <Link className="links" to="/">
-                    Home
-                  </Link>
-                </li>
-                <li className="services-link" onClick={handleChange}>
-                  Services <FaChevronDown />
-                </li>
-                {show && (
-                  <ul className="dropdown">
-                    <li>
-                      <Link onClick={handleChange} className="links" to="">
-                        Podcast
-                      </Link>
-                    </li>
-                    <li>
-                      <Link onClick={handleChange} className="links" to="">
-                        Meeting
-                      </Link>
-                    </li>
-                    <li>
-                      <Link onClick={handleChange} className="links" to="">
-                        Bible debates
-                      </Link>
-                    </li>
-                    <li>
-                      <Link onClick={handleChange} className="links" to="">
-                        Prayers
-                      </Link>
-                    </li>
-                  </ul>
-                )}
-                <li>
-                  <Link className="links" to="/about">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link className="links" to="/contact">
-                    Contact Us
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            <ul className="nav--links">
+              <li onClick={handleLinkClick}>
+                <Link className="links" to="/">
+                  Home
+                </Link>
+              </li>
+              <li className="services-link" onClick={handleChange}>
+                Services <FaChevronDown />
+              </li>
+              {show && (
+                <ul className="dropdown">
+                  <li onClick={handleLinkClick}>
+                    <Link className="links" to="">
+                      Podcast
+                    </Link>
+                  </li>
+                  <li onClick={handleLinkClick}>
+                    <Link className="links" to="">
+                      Meeting
+                    </Link>
+                  </li>
+                  <li onClick={handleLinkClick}>
+                    <Link className="links" to="">
+                      Bible debates
+                    </Link>
+                  </li>
+                  <li onClick={handleLinkClick}>
+                    <Link className="links" to="">
+                      Prayers
+                    </Link>
+                  </li>
+                </ul>
+              )}
+              <li onClick={handleLinkClick}>
+                <Link className="links" to="/about">
+                  About Us
+                </Link>
+              </li>
+              <li onClick={handleLinkClick}>
+                <Link className="links" to="/contact">
+                  Contact Us
+                </Link>
+              </li>
+            </ul>
+          </div>
           <div className="get-featured">
             <Link to="/featured" className="get-featured-link">
               Get featured

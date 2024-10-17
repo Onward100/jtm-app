@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./AboutPage.css";
 import banner from "../../assets/images/about.png";
 import image1 from "../../assets/images/about1.png";
@@ -13,6 +13,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import Footer from "../../components/Footer/Footer";
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 export default function AboutPage() {
   //Table
@@ -24,33 +26,39 @@ export default function AboutPage() {
       <table style={{ borderCollapse: "collapse", width: "100%" }}>
         <thead>
           <tr style={{ backgroundColor: "#333", color: "#fff" }}>
-          <th style={{ padding: "10px" }}>Shows</th>
-          <th style={{ padding: "10px" }}>Description</th>
-          <th style={{ padding: "10px" }}>Day</th>
-          <th style={{ padding: "10px" }}>Time</th>
-          <th style={{ padding: "10px" }}>Host</th>
+            <th style={{ padding: "10px" }}>Shows</th>
+            <th style={{ padding: "10px" }}>Description</th>
+            <th style={{ padding: "10px" }}>Day</th>
+            <th style={{ padding: "10px" }}>Time</th>
+            <th style={{ padding: "10px" }}>Host</th>
           </tr>
         </thead>
         <tbody>
-        {showsData.map((show, index) => (
-          <tr key={index}>
-            <td style={{ padding: "10px", border: "1px solid #ddd", backgroundColor: "#FABC52" }}>
-              {show.title}
-            </td>
-            <td style={{ padding: "10px", border: "1px solid #ddd" }}>
-              {show.description}
-            </td>
-            <td style={{ padding: "10px", border: "1px solid #ddd" }}>
-              {show.day}
-            </td>
-            <td style={{ padding: "10px", border: "1px solid #ddd" }}>
-              {show.time}
-            </td>
-            <td style={{ padding: "10px", border: "1px solid #ddd" }}>
-              {show.host}
-            </td>
-          </tr>
-        ))}
+          {showsData.map((show, index) => (
+            <tr key={index}>
+              <td
+                style={{
+                  padding: "10px",
+                  border: "1px solid #ddd",
+                  backgroundColor: "#FABC52",
+                }}
+              >
+                {show.title}
+              </td>
+              <td style={{ padding: "10px", border: "1px solid #ddd" }}>
+                {show.description}
+              </td>
+              <td style={{ padding: "10px", border: "1px solid #ddd" }}>
+                {show.day}
+              </td>
+              <td style={{ padding: "10px", border: "1px solid #ddd" }}>
+                {show.time}
+              </td>
+              <td style={{ padding: "10px", border: "1px solid #ddd" }}>
+                {show.host}
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     );
@@ -59,60 +67,68 @@ export default function AboutPage() {
   //Table Data
   const showsData = [
     {
-      title: "Faith Talks",
-      description: "Discussions on faith and spirituality.",
-      day: "Monday",
-      time: "6:00 PM",
-      host: "John Doe",
+      title: "Artist Focus",
+      description:
+        "Gives insights into Christian artists' lives, crafts, and journeys as Christian creatives. Saturdays",
+      day: "Saturdays",
+      time: "4pm",
+      host: "-",
     },
     {
-      title: "Music for the Soul",
-      description: "Uplifting Christian music.",
-      day: "Tuesday",
-      time: "7:00 PM",
-      host: "Jane Smith",
+      title: "Faith Struggles",
+      description:
+        "Open and transparent conversations about the struggles Christians face in our faith walk.",
+      day: "Sundays",
+      time: "7pm",
+      host: "-",
     },
     {
-      title: "Inspirational Stories",
-      description: "Sharing powerful testimonies.",
-      day: "Wednesday",
-      time: "5:00 PM",
-      host: "Mike Johnson",
+      title: "Gospel Buzz",
+      description:
+        "Discusses Christian events, highlights, and happenings within God’s kingdom and among His people",
+      day: "Mondays",
+      time: "7pm",
+      host: "-",
     },
     {
-      title: "Prayer Hour",
-      description: "Time for community prayer.",
-      day: "Thursday",
-      time: "8:00 PM",
-      host: "Sarah Lee",
+      title: "Gospel Chill",
+      description:
+        "Interviews/conversations with creatives, ministers, and Christians, showcasing their crafts and bits of their lives",
+      day: "Tuesdays",
+      time: "6pm",
+      host: "-",
     },
     {
-      title: "Bible Study",
-      description: "In-depth study of the Scriptures.",
-      day: "Friday",
-      time: "7:30 PM",
-      host: "Emily Davis",
+      title: "Gospel Countdown",
+      description:
+        "Countdown to the top charting gospel tunes around the globe",
+      day: "Fridays",
+      time: "6pm",
+      host: "-",
     },
     {
-      title: "Youth Connect",
-      description: "Engaging discussions for the youth.",
-      day: "Saturday",
-      time: "3:00 PM",
-      host: "Chris Brown",
+      title: "Gospel Request",
+      description:
+        "Listeners can request and listen to songs from their faves and give shout-outs to loved ones.",
+      day: "Wednesdays",
+      time: "6pm",
+      host: "-",
     },
     {
-      title: "Sunday Service",
-      description: "Weekly church service.",
-      day: "Sunday",
-      time: "10:00 AM",
-      host: "Pastor Steve",
+      title: "Intimacy on TJTR",
+      description:
+        "Enjoy a quiet time with songs that stir you to pray and worship. Providing a consciousness of Fellowship with God.",
+      day: "Thursdays",
+      time: "10pm",
+      host: "-",
     },
     {
-      title: "Mission Spotlight",
-      description: "Updates on mission work.",
-      day: "Every Other Sunday",
-      time: "1:00 PM",
-      host: "Alice White",
+      title: "Playlist Saturday",
+      description:
+        "Select and play Christian songs from playlists curated and sent in by the listeners.",
+      day: "Saturdays",
+      time: "9PM",
+      host: "-",
     },
   ];
 
@@ -169,6 +185,14 @@ export default function AboutPage() {
   const toggleAnswer = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
+  //AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+    });
+  }, []);
+
   return (
     <div>
       <div className="about">
@@ -186,7 +210,7 @@ export default function AboutPage() {
         </div>
         <div className="about-sections">
           <div className="about-section1">
-            <div className="section-left">
+            <div className="section-left" data-aos="fade-right" data-aos-duration="1000">
               <h3>About Us</h3>
               <p>
                 We are a Christian Media Company driven by a profound vision: to
@@ -199,41 +223,39 @@ export default function AboutPage() {
                 impact lives.
               </p>
             </div>
-            <div className="section-right">
+            <div className="section-right" data-aos="fade-left" data-aos-duration="1500">
               <img src={image1} alt="" />
             </div>
           </div>
 
           <div className="about-section1">
-            <div className="section-left">
+            <div className="section-left" data-aos="fade-right" data-aos-duration="1000">
               <h3>Our Mission</h3>
               <p>
                 To impact people’s lives by delivering edifying Christian
                 content - through media. 
               </p>
             </div>
-            <div className="section-right">
+            <div className="section-right" data-aos="fade-left" data-aos-duration="1500">
               <img src={image2} alt="" />
             </div>
           </div>
           <div className="about-section1">
-            <div className="section-left">
+            <div className="section-left" data-aos="fade-right" data-aos-duration="1000">
               <h3>Our Vision</h3>
               <p>
                 To see all men come to know Christ Jesus by using media to share
                 the Gospel
               </p>
             </div>
-            <div className="section-right">
+            <div className="section-right" data-aos="fade-left" data-aos-duration="1500">
               <img src={image3} alt="" />
             </div>
           </div>
         </div>
         <div className="programs">
           <h2>Our shows and programmes</h2>
-          <div className="programs-table">
-          {renderTable()}
-          </div>
+          <div className="programs-table">{renderTable()}</div>
         </div>
         <div className="team">
           <h3>

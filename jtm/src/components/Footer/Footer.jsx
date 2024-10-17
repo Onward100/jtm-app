@@ -41,7 +41,7 @@ export default function Footer() {
                     placeholder="your email"
                     onChange={(e) => setEmail(e.target.value)}
                   />
-                <button type="submit">Subscribe</button>
+                <button type="submit">Send</button>
                 </div>
               </form>
               <ToastContainer />

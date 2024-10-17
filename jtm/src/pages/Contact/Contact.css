@@ -1,75 +1,92 @@
-.contact-banner img{
+.contact-banner img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+}
+.contact-detail {
+  width: 80%;
+  margin: auto;
+}
+.contact-team {
+  width: 80%;
+  margin: auto;
+}
+.contact-left {
+  background-color: #ede0cf;
+  padding: 10px;
+  margin: 30px 0;
+}
+.contact-right .form {
+  background-color: #2b2d38;
+}
+.form select{
+background-color: #2b2d38;
+color: white  ;
+}
+.form input,
+textarea {
+  background-color: transparent;
+  color: white;
+}
+.contact-team {
+  margin-bottom: 60px;
+}
+.contact-team img {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .contact-banner img {
+    height: 90vh;
+  }
+  .contact-detail {
+    display: flex;
     width: 100%;
-    height: 80vh;
-    object-fit: cover;
-}
-.contact-detail{
-    width: 80%;
-    margin: auto;
-}
-.contact-team{
-    width: 80%;
-    margin: auto;
-}
-.contact-left{
-    background-color: #EDE0CF;
-    padding: 10px;
-    margin: 30px 0;
-}
-.contact-right .form{
-    background-color: #2B2D38;
-}
-.form input,textarea, select{
-    background-color: transparent;
-    color: white;
-}
-.contact-team{
-    margin-bottom: 60px;
-}
-.contact-team img{
-    width: 100%;
-}
-@media screen and (min-width: 768px){
-    .contact-banner img{
-        height: 90vh;
-    }
-    .contact-detail{
-        display: flex;
-        width: 100%;
-        margin-top: -4px;
-    }
-    .contact-left{
-        width: 50%;
+    margin-top: -4px;
+  }
+  .contact-left {
+    width: 50%;
     margin: 0;
     padding-top: 170px;
     padding-left: 180px;
-        height: 55vh;
-    }
-    .contact-left p{
-        width: 80%;
-    }
-    .contact-team-left h3{
-        width: 70%;
-    }
-    .contact-right{
-        width: 50%;
-        background-color: #2B2D38;
-    }
-    .form{
-        margin-top: 80px;
-        border: 2px solid gray;
-    }
-    .contact-team{
-        display: flex;
-        margin-top: 30px;
-        justify-content: space-between;
-    }
-    .contact-team-right{
-        width: 50%;
-    }
-    .contact-team-right img{
-        width: 80%;
-        height: 500px;
-        object-fit: cover;
-    }
+    height: 55vh;
+  }
+  .contact-left p {
+    width: 80%;
+  }
+  .contact-team-left h3 {
+    width: 70%;
+  }
+  .contact-right {
+    width: 50%;
+    background-color: #2b2d38;
+  }
+  .contact-right .form {
+    margin-top: 80px;
+    border: 2px solid gray;
+    height: 400px;
+    width: 60%;
+    margin: 50px auto;
+  }
+  .contact-team {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+  }
+  .contact-team-right {
+    width: 50%;
+  }
+  .contact-team-right img {
+    width: 80%;
+    height: 500px;
+    object-fit: cover;
+  }
+  .form input,
+  textarea,
+  select {
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+  .form button{
+ width: 130px;
+  }
 }

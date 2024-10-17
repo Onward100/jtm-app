@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Featured.css";
 import banner from "../../assets/images/feature-img1.png";
 import advertImage from "../../assets/images/feature-img2.png";
@@ -6,6 +6,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import Footer from "../../components/Footer/Footer";
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 export default function Featured() {
   const [email, setEmail] = useState("");
@@ -94,6 +96,13 @@ export default function Featured() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+    //AOS
+    useEffect(() => {
+      AOS.init({
+        duration: 1000, 
+      });
+    }, []);
+
   return (
     <div>
       <div className="featured">
@@ -104,7 +113,7 @@ export default function Featured() {
           <section>
             <h2 className="brand-text">Adverts and Promotions</h2>
             <div className="advert">
-              <div className="advert-left">
+              <div className="advert-left" data-aos="fade-right" data-aos-duration="1000">
                 <p>
                   Effective advertising and promotional strategies are crucial
                   for capturing your audience's attention and driving
@@ -119,7 +128,7 @@ export default function Featured() {
                   promotional campaign with us!
                 </p>
               </div>
-              <div className="advert-right">
+              <div className="advert-right" data-aos="fade-left" data-aos-duration="1500">
                 <img src={advertImage} alt="advert image" />
               </div>
             </div>

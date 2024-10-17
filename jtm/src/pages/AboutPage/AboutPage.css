@@ -23,7 +23,7 @@
   margin: 50px auto;
 }
 .about-section1 {
-  margin-bottom: 20px;
+  margin-bottom: 140px;
 }
 .section-right img {
   width: 100%;
@@ -32,11 +32,24 @@
 .programs h2{
     text-align: center;
 }
-.programs-table{
-    width: 80%;
-    margin: 30px auto;
+.programs-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  width: 100%; 
+  table-layout: auto;
+}
+th, td {
+  min-width: 100px;
+  padding: 10px; 
+  text-align: left;
 }
 /* Teams */
+.team {
+  margin-top: 80px;
+}
 .team h3 {
   text-align: center;
   font-weight: 500;
@@ -73,6 +86,12 @@
     width: 30%;
     margin: 250px auto;
   }
+  .banner-header p{
+    font-size: 18px;
+  }
+  .banner-header h2{
+    font-size: 40px;
+  }
   .about-section1 {
     display: flex;
     justify-content: space-between;
@@ -92,6 +111,7 @@
   /* Programs */
   .programs-table{
     width: 60%;
+    margin: auto;
   }
  
   /* Teams */
