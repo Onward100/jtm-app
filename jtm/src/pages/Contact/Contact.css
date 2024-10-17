@@ -16,17 +16,63 @@
   padding: 10px;
   margin: 30px 0;
 }
-.contact-right .form {
-  background-color: #2b2d38;
+.message-form {
+  margin: 40px 0;
 }
-.form select{
-background-color: #2b2d38;
-color: white  ;
+.form {
+  background-color: #2B2D38;
+  color: white;
+  padding: 40px 30px;
+  border-radius: 5px;
 }
-.form input,
-textarea {
+.form span {
+  color: red;
+}
+.form input {
+  width: 98%;
+  border: 1px solid #2B2D38;
+  outline: none;
+  margin-bottom: 10px;
+  height: 30px;
+  border-radius: 5px;
+  padding-left: 5px;
+  margin: 20px 0;
   background-color: transparent;
   color: white;
+}
+.form textarea {
+  width: 98%;
+  border: 1px solid #2B2D38;
+  outline: none;
+  margin-bottom: 10px;
+  height: 100px;
+  border-radius: 5px;
+  padding-left: 5px;
+  margin: 20px 0;
+  margin: 20px 0;
+  background-color: transparent;
+  color: white;
+}
+.form select {
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #2B2D38;
+  outline: none;
+  height: 30px;
+  border-radius: 5px;
+  margin: 20px 0;
+  background-color: #2B2D38;
+  color: white;
+}
+.form button {
+  outline: none;
+  border: none;
+  padding: 8px;
+  margin: auto;
+  width: 30%;
+  display: block;
+  border-radius: 40px;
+  background-color: #fabc52;
 }
 .contact-team {
   margin-bottom: 60px;

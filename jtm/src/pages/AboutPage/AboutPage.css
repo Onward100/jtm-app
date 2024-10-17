@@ -75,6 +75,27 @@ th, td {
     width: 80%;
     margin: 80px auto;
 }
+.faq-item{
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  padding: 8px;
+  background-color: #FCFCFC;
+}
+.featured .faq-container span{
+padding: 10px 8px;
+}
+.faq-question{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: .3s ease;
+}
+.chevron-icon{
+  border: 1px solid black;
+  padding: 2px;
+  border-radius: 100px;
+}
 
 @media screen and (min-width: 786px) {
   .about-banner img {
