@@ -21,6 +21,7 @@
 .about-sections {
   width: 80%;
   margin: 50px auto;
+  overflow: hidden;
 }
 .about-section1 {
   margin-bottom: 140px;

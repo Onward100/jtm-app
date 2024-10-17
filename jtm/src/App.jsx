@@ -4,7 +4,7 @@ import NavBar from "./components/NavBar/NavBar";
 import ScrollToTop from "./components/ScroolToTop/ScrollToTop";
 import ScrollToTopButton from './components/ScroolToTop/ScrollToTopButton';
 
-const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
+const Home = lazy(() => import("./pages/Home/Home"));
 const AboutPage = lazy(() => import("./pages/AboutPage/AboutPage"));
 const Featured = lazy(() => import("./pages/Featured/Featured"));
 const Contact = lazy(() => import("./pages/Contact/Contact"));
@@ -17,7 +17,7 @@ function App() {
         <NavBar />
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/featured" element={<Featured />} />
           <Route path="/contact" element={<Contact />} />
