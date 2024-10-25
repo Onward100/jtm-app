@@ -1,3 +1,7 @@
+body{
+  background-color: black;
+  color: white;
+}
 .background-left {
   color: white;
   height: 80vh;
@@ -47,6 +51,10 @@
   min-width: 100%;
   align-items: center;
   gap: 15px;
+}
+
+.express p{
+  color: #000;
 }
 
 .express-link {
@@ -130,9 +138,10 @@
   display: flex;
   gap: 10px;
   padding: 10px 20px;
-  background-color: white;
+  background-color: #444444;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
+  color: white;
 }
 .yellow-mail-icon {
   margin-top: 18px;
@@ -344,13 +353,16 @@
 }
 .wots img {
   width: 100%;
+  object-fit: fill;
+  height: 300px;
+  margin-bottom: 20px;
 }
 .wots p {
   background-color: #f0ce91;
   padding: 20px 20px 0;
   height: 100px;
+  margin: 0;
 }
-
 .splide__pagination__page.is-active {
   background-color: #fabc52 !important;
 }
@@ -376,8 +388,8 @@
     object-fit: cover;
   }
   .left-content {
-    width: 50%;
-    margin: 30px 120px;
+    width: 80%;
+    margin: -90px 20px;
   }
   .left-content h2 {
     font-size: 34px;
@@ -385,12 +397,13 @@
   .express{
     justify-content: center;
   }
+ 
 
   /* Know us section */
   .know-us {
     display: flex;
-    justify-content: space-between;
     margin-top: 40px;
+    gap: 90px;
   }
   .know-us-right {
     width: 50%;
@@ -401,10 +414,12 @@
   }
   .know-us-right p {
     width: 80%;
-    font-size: 17px;
+    font-size: 13px;
+    opacity: .8;
+    margin-bottom: 20px;
   }
   .know-us-right h3 {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   /* Yellow mail */
@@ -419,7 +434,8 @@
   }
   .yellow-mail-left p {
     width: 80%;
-    font-size: 17px;
+    font-size: 13px;
+    opacity: .8;
   }
   .yello-mail-bottom {
     display: flex;
@@ -439,7 +455,8 @@
   }
   .radio-left p {
     width: 80%;
-    font-size: 17px;
+    font-size: 13px;
+    opacity: .8;
   }
   .radio-right {
     width: 50%;
@@ -451,8 +468,10 @@
 
   /* Social Media */
   .social-media {
-    margin: 80px auto;
+    margin: 50px auto;
     display: flex;
+    align-items: center;
+    gap: 50px;
     /* flex-direction: row-reverse; */
     justify-content: space-between;
   }
@@ -460,14 +479,23 @@
     width: 50%;
     margin-top: 90px;
   }
+  .social-media-left h3{
+    width: 80%;
+    margin-bottom: 40px;
+  }
   .social-media-left button {
     padding: 8px 25px;
     text-align: center;
   }
   .youtube-up p {
     width: 50%;
-    font-size: 17px;
+    font-size: 13px;
     margin: 20px auto;
+  }
+
+  .social-media-right img{
+    position: relative;
+    top: 50px;
   }
 
   /* Youtube */
@@ -476,10 +504,18 @@
     text-align: center;
   }
   .play {
-    top: 250px;
+    top: 160px !important;
     font-size: 60px;
-    left: 580px;
+    left: 380px !important;
   }
+
+/* Social media2 podcast2 */
+.podcast2 .social-media-left{
+  width: 50%;
+}
+.podcast2 .social-media-left p{
+  opacity: .8;
+}
   /* Yellow blog section */
   .yellow-blog-content {
     display: flex;
@@ -491,7 +527,8 @@
     text-align: center;
   }
   .yellow-blog p {
-    font-size: 17px;
+    font-size: 14px;
+    opacity: .8;
   }
   .blog-intro {
     width: 40%;
@@ -515,6 +552,9 @@
   .right3-text {
     width: 80%;
   }
+  .yellow-blog-right h3{
+    font-size: 17px;
+  }
   /* Word on the street */
   .wots-content {
     display: flex;
@@ -529,22 +569,40 @@
     display: flex;
     gap: 10px;
   }
-  .wots-content p {
-    padding: 40px 20px 0;
-    height: 150px;
+  .wots img{
+    width: 50%;
   }
   .splide1 {
     display: flex;
-    gap: 20px;
-    margin-bottom: 50px;
+    gap: 10px;
+    margin-bottom: 100px;
+    width: 100%;
   }
   .splide__pagination__page {
     position: relative;
     top: 20px;
   }
-  .play {
-    top: 250px;
-    font-size: 60px;
-    left: 580px;
-  }
+  .splide__arrow {
+    position: absolute;
+    top: 410px; 
+    left: 40%;
+    transform: translateX(-50%); 
+    cursor: pointer; 
+    z-index: 10; 
+}
+
+.splide__arrow--prev {
+    margin-right: 90px; 
+}
+
+.splide__arrow--next {
+    margin-left: 155px; 
+}
+.wots p {
+  background-color: #f0ce91;
+  padding: 40px 20px 0;
+  height: 200px;
+  margin: 0;
+}
+
 }

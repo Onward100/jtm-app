@@ -2,6 +2,7 @@
     background-color: black;
     color: white;
     border-radius: 0 140px 0 0;
+    border-top: 2px solid white;
 }
 .footer-items{
     padding: 10px 20px;

@@ -350,7 +350,7 @@ export default function Home() {
             </Modal>
           </div>
         </section>
-        <section className="social-media">
+        <section className="social-media podcast2">
           <div
             className="social-media-left"
             data-aos="fade-right"
