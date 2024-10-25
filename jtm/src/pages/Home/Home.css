@@ -414,7 +414,7 @@ body{
   }
   .know-us-right p {
     width: 80%;
-    font-size: 13px;
+    font-size: 16px;
     opacity: .8;
     margin-bottom: 20px;
   }
@@ -434,7 +434,7 @@ body{
   }
   .yellow-mail-left p {
     width: 80%;
-    font-size: 13px;
+    font-size: 16px;
     opacity: .8;
   }
   .yello-mail-bottom {
@@ -455,7 +455,7 @@ body{
   }
   .radio-left p {
     width: 80%;
-    font-size: 13px;
+    font-size: 16px;
     opacity: .8;
   }
   .radio-right {
@@ -527,7 +527,7 @@ body{
     text-align: center;
   }
   .yellow-blog p {
-    font-size: 14px;
+    font-size: 16px;
     opacity: .8;
   }
   .blog-intro {
